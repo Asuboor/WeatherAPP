@@ -3,6 +3,7 @@ import "./App.css";
 import { useEffect } from "react";
 import { useState } from "react";
 
+
 function App() {
   const [cityName, setCityName] = useState("Hyderabad");
   const [inputText, setInputText] = useState("");
@@ -12,7 +13,7 @@ function App() {
 
 
   useEffect(() => {
-    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid={API_KEY}&units=metric`).then((res) => {
+    fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${process.env.REACT_APP_API}&units=metric`).then((res) => {
       if (res.status === 200) {
         error && setError(false);
         return res.json();
