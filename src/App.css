@@ -11,10 +11,16 @@ body {
   overflow-x: hidden;
 }
 
+.day{
+  margin: 10px;
+  font-size: 40px;
+  padding: 20px;
+}
+
 .bg_img{
   width: 100%;
   min-height: 100vh;
-  background: url(images/bg.jpg) no-repeat center center/cover;
+  background: url(images/bg2.jpg) no-repeat center center/cover;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -22,9 +28,11 @@ body {
   color: #fff;
 }
 
+
 .input{
-  background-color: rgba(255, 255, 255, 0.75);
+  background-color: rgb(171, 180, 188);;
   width: 60%;
+  border-radius: 10px;
 }
 
 .group{
@@ -36,6 +44,7 @@ body {
 
 .city{
   margin-top: 2rem;
+
 }
 
 .city,.temp{
@@ -48,22 +57,39 @@ body {
   align-items: center;
   justify-content: center;
   gap: 25px;
+  /* background-color: rgba(159, 155, 184, 0.75); */
+  padding: 1rem;
+  border-radius: 25px ;
+  color: black;
 }
+
 
 .box{
   padding: 1rem;
-  border-radius: 12px;
-  background-color: rgba(0, 0, 0, 0.75);
+  border-radius: 25px ;
+  border: 5px solid black;
+  /* background-color: rgba(0, 0, 0, 0.75); */
   width: 220px;
   text-align: center;
   display: flex;
   flex-direction: column;
   gap: 10px;
   transition: transform 0.2sec;
+background-color: rgb(171, 180, 188);
+}
+.box p{
+  font-size: 1.8rem;
 }
 
 .box:hover{
   transform: scale(1.1);
+}
+.box img{
+
+  width:30px;
+}
+.box .wind{
+  width:30px;
 }
 
 @media only screen and (max-width:730px) {
