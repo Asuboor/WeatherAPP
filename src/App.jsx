@@ -12,7 +12,7 @@ function App() {
   const [error, setError] = useState(false);
   const [loading, setLoading] = useState(true);
 
-
+//fetching the api
   useEffect(() => {
     fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityName}&appid=${process.env.REACT_APP_API}&units=metric`).then((res) => {
       if (res.status === 200) {
@@ -29,12 +29,8 @@ function App() {
     }).finally(() => {
       setLoading(false);
     })
-
-    
-
-
   }, [cityName, error])
-  console.log(data)
+
 
   
 
